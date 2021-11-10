@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Turjoman</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+  <div class="header">
+    <a> <img class="Logoimg" src="logo.png" width="150" height="120" alt="tarjuman"> </a>
+    <div class="header-right">
+    </div>
+  </div>
+   <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a><img class = "icon"  src="account-profile-icon-2.png"  width="70" height="70"  > </a>
+
+  <a class= "icon"> Name</a>
+<br>
+  <a class= "profile" href="ViewAdmin.html"> View profile </a>
+  <a class= "profile" href="EditProfileAdmin.html">  Edit profile </a>
+  <a class= "profile" href="#">Sign out</a>
+
+</div>
+
+  <div class="content">
+    <h1></h1>
+    <table id="customers">
+      <tr>
+        <th>Translator Name</th>
+        <th>Register Form</th>
+        <th>Action</th>
+      </tr>
+      <tr>
+        <td>Berglunds snabbköp</td>
+        <td class="cell-centering"><button class="button button1" onclick="openModal();">More Info</button></td>
+        <td class="cell-centering">
+          <button class="button button1">Accept</button>
+          <button class="button button2">Reject</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Sara Mohamed</td>
+        <td class="cell-centering"><button class="button button1" onclick="openModal();">More Info</button></td>
+        <td class="cell-centering">
+          <button class="button button1">Accept</button>
+          <button class="button button2">Reject</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Noha Ahmed</td>
+        <td class="cell-centering"><button class="button button1" onclick="openModal();">More Info</button></td>
+        <td class="cell-centering">
+          <button class="button button1">Accept</button>
+          <button class="button button2">Reject</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Abeer Fahad</td>
+        <td class="cell-centering"><button class="button button1" onclick="openModal();">More Info</button></td>
+        <td class="cell-centering">
+          <button class="button button1">Accept</button>
+          <button class="button button2">Reject</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Ahmed Mohamed</td>
+        <td class="cell-centering"><button class="button button1" onclick="openModal();">More Info</button></td>
+        <td class="cell-centering">
+          <button class="button button1">Accept</button>
+          <button class="button button2">Reject</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a>
+    <a class="signout" href="#">Sign out</a>
+  </div>
+
+
+  <!-- Use any element to open the sidenav -->
+  <span onclick="openNav()"></span>
+
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+  <div id="main">
+  </div>
+  <span class="lines" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+  <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p><b>Translator Information</b></p>
+    <p>Name: Sara Mohamed</p>
+    <p>Email: sara@gmail.com</p>
+    <p>Type: Freelancer</p>
+    <p>Age: 20</p>
+    <p>National ID: 2025141412</p>
+    <p>IBAN: SA5258241414122522</p>
+    <p>CV document: <a href="#">File Link</a></p>
+  </div>
+
+</div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    /* Set the width of the side navigation to 0 */
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+
+  // Get the button that opens the modal
+  //var btn = document.getElementById("myBtn");
+  var btn = document.getElementsByClassName("myBtn");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+  function openModal()
+  {
+    modal.style.display = "block";
+  }
+
+
+</script>
+
+
+</body>
+
+</html>

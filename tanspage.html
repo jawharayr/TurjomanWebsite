@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Turjoman</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="box-menu">
+    <ul>
+      <li class="active"><a href="#start">Store</a></li>
+      <li><a href="#about">Buy</a></li>
+      <li><a href="#settings">Sell</a></li>
+    </ul>
+  </div>
+  <div class="tab-content">
+    <div class="box" id="start">
+      <h2>Hello there</h2>
+      <p>I'm just a cute little box with a menu. I'm also fully responsive. Use it as you wish!</p>
+    </div>
+    <div class="box" id="about">
+      <h2>About</h2>
+      <p>Haec quo modo conveniant, non sane intellego. Collige omnia, quae soletis: Praesidium amicorum. Sed tamen enitar et, si minus multa mihi occurrent, non fugiam ista popularia.</p>
+    </div>
+    <div class="box" id="settings">
+      <h2>Settings</h2>
+      <form>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button class="submit">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
+<script>
+  jQuery(document).ready(function() {
+  jQuery('.box-menu a').on('click', function(e) {
+    var currentAttrValue = jQuery(this).attr('href');
+
+    // Show/Hide Tabs
+    jQuery('.tab-content ' + currentAttrValue).slideDown(400).siblings().slideUp(400);
+
+    // Change/remove current tab to active
+    jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+
+    e.preventDefault();
+  });
+});
+</script>
+</body>
+</html>

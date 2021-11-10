@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Turjoman</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="header">
+  <a > <img class ="Logoimg" src="logo.png" width="150" height="120" alt="tarjuman"> </a>
+  <input type="text" placeholder="Search for language or translator name.."> 
+   <button class="button button1 ">Search</button>
+  <div class="header-right">
+</div>
+  </div>
+
+   <div id="mySidenav" class="sidenav">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a><img class = "icon"  src="account-profile-icon-2.png"  width="70" height="70"> </a>
+
+  <a class= "icon"> Name</a>
+<br>
+  <a class= "profile" href="#">  profile </a>
+    <a class= "profile" href="CustomerViewTranslators.html"> Translators</a>
+	  <a class= "profile" href="CustCurrentOrder.html"> Orders</a>
+  <a class= "profile" href="HomeP.html">Sign out</a>
+
+</div>
+
+  <div  id ="transInfo" class="content cell-centering" >
+    <h1>Translator Info</h1>
+     <h4>Sara Ahmed</h4>
+					<pre>
+ Email: <a href="mailto:sara@gmail.com">Sara@gmail.com</a>
+
+Type: Freelancer
+
+Age: 20
+
+IBAN: SA5258241414122522
+
+CV document: <a href="#"> File Link</a>
+</pre>
+<button id="Rbutton" class="button button1 margin-top" onclick="uploadButton()">Request service</button>
+
+
+
+</div>
+    <span class="lines" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+function uploadButton() {
+ 
+var parent = document.getElementById("transInfo");
+
+  var x = document.createElement("input");
+  x.setAttribute("type", "file"); 
+  parent.appendChild(x);
+   
+    var y = document.createElement("button");
+   y.setAttribute("class", "button button2 margin-top");
+   var node = document.createTextNode("Submit");
+y.appendChild(node);
+    parent.appendChild(y);
+	
+	   parent.removeChild(document.getElementById("Rbutton"));
+	
+	
+}
+</script>
+</body>
+</html>

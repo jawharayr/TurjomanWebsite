@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Turjoman</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="header">
+  <a > <img class ="Logoimg" src="logo.png" width="150" height="120" alt="tarjuman"> </a>
+  <input type="text" placeholder="Search for language or translator name.."> 
+   <button class="button button1 ">Search</button>
+  <div class="header-right">
+</div>
+  </div>
+  <div class="links" style="--items: 5;">
+		<a href="CustRequests.html">Requests</a>
+		<a href="CustCurrentOrder.html">Current Orders</a>
+		<a href="CustOrderHistory.html">Orders History</a>
+		<span class="line"></span>
+	</div>
+
+   <div id="mySidenav" class="sidenav">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a><img class = "icon"  src="account-profile-icon-2.png"  width="70" height="70"> </a>
+
+  <a class= "icon"> Name</a>
+<br>
+  <a class= "profile" href="#">  profile </a>
+    <a class= "profile" href="CustomerViewTranslators.html"> Translators</a>
+	  <a class= "profile" href="CustCurrentOrder.html"> Orders</a>
+  <a class= "profile" href="HomeP.html">Sign out</a>
+
+</div>
+
+  <div  id ="transInfo" class="content cell-centering" >
+  <h1>Orders History</h1>
+    
+     <table id="customers" class = "center">
+      <tr>
+        <th>Order ID</th>
+		<th>  Translator </th>
+		 <th>Document</th>
+		 <th>Translate to</th>
+		 <th> Payment receipt</th>
+		  <th>Status</th>
+		  <th>Rate</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+		<td>Sara Ahmed</td>
+        <td><a href="logo.png" download> <button class="button button1">download </button></a></td>
+		<td> Arabic </td>
+		<td> <a href="logo.png" download> <button class="button button1">download </button></td>
+        <td class="green" >Complete</td>
+      </tr>
+	    <tr>
+        <td>1</td>
+		<td>Sara Ahmed</td>
+        <td><a href="logo.png" download> <button class="button button1">download </button></a></td>
+		<td> Arabic </td>
+		<td> <a href="logo.png" download> <button class="button button1">download </button></td>
+        <td class="green" >Complete</td>
+      </tr> 
+	  </table>
+
+</div>
+
+ <div  id ="transInfo" class="content cell-centering" >
+
+     <table id="customers" class = "center">
+      <tr>
+        <th>Order ID</th>
+		<th>  Translator </th>
+		 <th>Document</th>
+		 <th>Translate to</th>
+		  <th>Status</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+		<td>Sara Ahmed</td>
+        <td><a href="logo.png" download> <button class="button button1">download </button></a></td>
+		<td> Arabic </td>
+        <td>Rejected</td>
+      </tr>
+	    <tr>
+        <td>1</td>
+		<td>Sara Ahmed</td>
+        <td><a href="logo.png" download> <button class="button button1">download </button></a></td>
+		<td> Arabic </td>
+        <td>Rejected</td>
+      </tr> 
+	  </table>
+
+</div>
+    
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+function uploadButton() {
+ 
+var parent = document.getElementById("transInfo");
+
+  var x = document.createElement("input");
+  x.setAttribute("type", "file"); 
+  parent.appendChild(x);
+   
+    var y = document.createElement("button");
+   y.setAttribute("class", "button button2 margin-top");
+   var node = document.createTextNode("Submit");
+y.appendChild(node);
+    parent.appendChild(y);
+	
+	   parent.removeChild(document.getElementById("Rbutton"));
+	
+	
+}
+</script>
+</body>
+</html>
